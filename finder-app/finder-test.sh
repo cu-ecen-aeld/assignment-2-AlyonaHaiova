@@ -7,8 +7,7 @@ set -u
 
 NUMFILES=10
 WRITESTR=AELD_IS_FUN
-WRITEDIR=/home/alona/tasks/data
-#WRITEDIR=/tmp/aeld-data
+WRITEDIR=/tmp/aeld-data
 username=$(cat conf/username.txt)
 
 if [ $# -lt 3 ]
@@ -61,7 +60,7 @@ done
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 
 # remove temporary directories
-rm -rf /tmp/aeld-data
+#rm -rf /tmp/aeld-data
 
 set +e
 echo ${OUTPUTSTRING} | grep "${MATCHSTR}"
